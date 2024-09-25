@@ -14,7 +14,10 @@ class Shop():
 
     def get_products(self):
         file = open(self.__file_name, 'r')
-        return file.read()
+        product = file.read()
+        file.close()
+        return product
+        
     def add(self, *products):
         Tr = True
         file = open(self.__file_name, 'r+')
